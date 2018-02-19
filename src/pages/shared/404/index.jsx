@@ -1,7 +1,6 @@
-'use strict';
+"use strict";
 
-const React = require('react');
-const ReactDOM = require('react-dom');
+import React, { Component } from "react";
 
 class NotFound extends React.Component {
   constructor(props) {
@@ -9,9 +8,7 @@ class NotFound extends React.Component {
   }
 
   render() {
-    return (
-      <h1>Woah.. this page doesn't exist yet!</h1>
-    );
+    return <h1>Woah.. this page doesn't exist yet!</h1>;
   }
 }
 

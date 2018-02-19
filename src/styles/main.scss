@@ -24,3 +24,8 @@
   position: absolute;
   bottom: 0;
 }
+
+div {
+  box-sizing: border-box;
+  border: 1px dotted red;
+}

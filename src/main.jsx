@@ -1,9 +1,9 @@
-'use strict'
+"use strict";
 
-require('./styles/main.scss');
+require("./styles/main.scss");
 
-const React = require('react');
-const ReactDOM = require('react-dom');
-const Router = require('./router.jsx');
+import React, { Component } from "react";
+import Router from "./router.jsx";
+import ReactDOM from "react-dom";
 
-ReactDOM.render(<Router />, document.getElementById('container'));
+ReactDOM.render(<Router />, document.getElementById("container"));

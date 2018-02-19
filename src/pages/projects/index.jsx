@@ -2,19 +2,18 @@
 
 import React, { Component } from "react";
 
-class PageFooter extends React.Component {
+class Projects extends React.Component {
   constructor(props) {
     super(props);
   }
 
   render() {
     return (
-      <div className="footer">
-        <h2>Lillian Situ</h2>
-        <p>Github</p>
+      <div>
+        <h2>These are my projects</h2>
       </div>
     );
   }
 }
 
-module.exports = PageFooter;
+module.exports = Projects;

@@ -1,9 +1,8 @@
-'use strict';
+"use strict";
 
-const React = require('react');
-const ReactDOM = require('react-dom');
-const PageHeader = require('../shared/header/index.jsx');
-const PageFooter = require('../shared/footer/index.jsx');
+import React, { Component } from "react";
+// import { BrowserRouter, Route, Switch } from "react-router-dom";
+import ReactDOM from "react-dom";
 
 class Home extends React.Component {
   constructor(props) {
@@ -13,11 +12,9 @@ class Home extends React.Component {
   render() {
     return (
       <div>
-        <PageHeader />
         <div>
-          <h1>Site Title</h1>
+          <h1>Content Goes Here</h1>
         </div>
-        <PageFooter />
       </div>
     );
   }
