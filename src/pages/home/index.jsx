@@ -11,9 +11,19 @@ class Home extends React.Component {
 
   render() {
     return (
-      <div>
-        <div>
-          <h1>Content Goes Here</h1>
+      <div className="container">
+        <div className="row">
+          <div className="col-xs-12">
+            <h1>the hero img goes here</h1>
+            <div className="row">
+              <div className="col-xs-12 col-md-12">
+                <button>CLICK HERE</button>
+              </div>
+              <div className="col-xs-12 col-md-12">
+                <button>CLICK HERE</button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     );

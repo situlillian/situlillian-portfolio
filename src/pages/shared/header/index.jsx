@@ -23,15 +23,14 @@ class PageHeader extends React.Component {
     });
 
     return (
-      <div className="header">
-        <div className="row">
-          <div className="col-md-12">
+      // bootstrap ??
+      <nav className="navbar navbar-default">
+        <div className="container-fluid">
+          <div className="navbar-header">
+            <Link to="/">
+              <p className="logo">LS</p>
+            </Link>
             <ul className="nav navbar-nav navbar-right">
-              <li>
-                <Link to="/">
-                  <p className="logo">Lillian Situ</p>
-                </Link>
-              </li>
               <li>
                 <NavLink activeClassName="active" to="/projects">
                   <p className="navText">Projects</p>
@@ -51,7 +50,7 @@ class PageHeader extends React.Component {
             </ul>
           </div>
         </div>
-      </div>
+      </nav>
     );
   }
 }
