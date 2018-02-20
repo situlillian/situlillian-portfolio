@@ -18,7 +18,7 @@ class AppRouter extends React.Component {
   render() {
     return (
       <BrowserRouter>
-        <div className="container">
+        <div className="container-fluid">
           <PageHeader />
           <Switch>
             <Route exact path="/" component={Home} />

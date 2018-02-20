@@ -1,6 +1,7 @@
 "use strict";
 
 import React, { Component } from "react";
+import avatar from "../../styles/assets/lilliansitu.jpg";
 
 class Projects extends React.Component {
   constructor(props) {
@@ -16,14 +17,26 @@ class Projects extends React.Component {
           </div>
         </div>
         <div className="row">
-          <div className="col-xs-12 col-md-4">
-            <p>avatar</p>
+          <div className="col-xs-12 col-sm-4">
+            <img className="avatar" src={avatar} />
             <p>contact info</p>
             <p>social media</p>
           </div>
-          <div className="col-xs-12 col-md-8">
+          <div className="col-xs-12 col-sm-8 text-right">
             <form>
-              <button>click me</button>
+              <div className="form-group">
+                <input type="name" className="form-control" id="inputName" placeholder="Name" />
+              </div>
+              <div className="form-group">
+                <input type="email" className="form-control" id="inputEmail" placeholder="Email" />
+              </div>
+              <div className="form-group">
+                <input type="phone" className="form-control" id="inputPhone" placeholder="Phone" />
+              </div>
+              <textarea className="form-control" rows="3" placeholder="Message" />
+              <button type="submit" className="btn btn-default">
+                Send
+              </button>
             </form>
           </div>
         </div>

@@ -9,7 +9,7 @@ class PageFooter extends React.Component {
 
   render() {
     return (
-      <div className="footer">
+      <div>
         <h2>Lillian Situ</h2>
         <p>Github</p>
       </div>

@@ -1,6 +1,7 @@
 "use strict";
 
 import React, { Component } from "react";
+import { Navbar, NavItem, Nav } from "react-bootstrap";
 import { Link, NavLink } from "react-router-dom";
 
 class PageHeader extends React.Component {
@@ -13,42 +14,42 @@ class PageHeader extends React.Component {
 
     // Add future links lowercase with hyphens
     ["projects", "contact", "about"].forEach((item, index) => {
+      const link = "/" + item;
       nav.push(
         <li key={index}>
-          <NavLink exact activeClassName="active" to="{`/${item}`}">
-            <p className="navText">{item.replace("-", " ")}</p>
+          <NavLink activeClassName="active" to={link}>
+            <p className="text-uppercase navText">{item}</p>
           </NavLink>
         </li>
       );
     });
 
     return (
-      // bootstrap ??
-      <nav className="navbar navbar-default">
+      <nav className="navbar">
         <div className="container-fluid">
           <div className="navbar-header">
-            <Link to="/">
-              <p className="logo">LS</p>
+            <button
+              type="button"
+              className="navbar-toggle collapsed"
+              data-toggle="collapse"
+              data-target="#bs-example-navbar-collapse-1"
+              aria-expanded="false"
+            >
+              <span className="sr-only">Toggle navigation</span>
+              <span className="icon-bar" />
+              <span className="icon-bar" />
+              <span className="icon-bar" />
+            </button>
+            <Link className="navbar-brand" to="/">
+              LS
             </Link>
-            <ul className="nav navbar-nav navbar-right">
-              <li>
-                <NavLink activeClassName="active" to="/projects">
-                  <p className="navText">Projects</p>
-                </NavLink>
-              </li>
-              <li>
-                <NavLink activeClassName="active" to="/contact">
-                  <p className="navText">Contact</p>
-                </NavLink>
-              </li>
-              <li>
-                <NavLink activeClassName="active" to="/about">
-                  <p className="navText">About</p>
-                </NavLink>
-              </li>
-              {/* {nav} */}
-            </ul>
           </div>
+
+          <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul className="nav navbar-nav navbar-right">{nav}</ul>
+            {/* <!-- /.navbar-collapse --> */}
+          </div>
+          {/* <!-- /.container-fluid --> */}
         </div>
       </nav>
     );
