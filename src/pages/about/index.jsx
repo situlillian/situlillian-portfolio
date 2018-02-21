@@ -9,8 +9,14 @@ class Projects extends React.Component {
 
   render() {
     return (
-      <div className="container">
-        <h2>About holder</h2>
+      <div className="whiteBg">
+        <div className="row">
+          <div className="container">
+            <div className="col-xs-12">
+              <h2>About holder</h2>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }

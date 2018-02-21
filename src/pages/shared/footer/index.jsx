@@ -9,9 +9,12 @@ class PageFooter extends React.Component {
 
   render() {
     return (
-      <div>
-        <h2>Lillian Situ</h2>
-        <p>Github</p>
+      <div className="footer text-left">
+        <p className="brand">Lillian Situ</p>
+        <p>
+          ©2018. All Rights Reserved.<br />
+          Core services: Web Design and Development
+        </p>
       </div>
     );
   }

@@ -52,22 +52,24 @@ class Projects extends React.Component {
 
       projects.push(
         <div key={i}>
-          <div className="row">
-            <div className="col-sm-6 col-xs-12">
-              <h1>PREVIEW IMG HERE</h1>
-            </div>
-            <div className="col-sm-6 col-xs-12">
-              <h2>
-                <a href={item.fields.link} target="blank">
-                  {item.fields.name}
-                </a>
-              </h2>
-              <div>
-                <p>{item.fields.description}</p>
+          <div className="row project">
+            <div className="container">
+              <div className="col-sm-6 col-xs-12">
+                <img className="img-responsive" src={item.fields.preview.fields.file.url} />
               </div>
-              <div>
-                <ul className="list-unstyled skills">{tags}</ul>
-                {source}
+              <div className="col-sm-6 col-xs-12">
+                <h2>
+                  <a href={item.fields.link} target="blank">
+                    {item.fields.name}
+                  </a>
+                </h2>
+                <div>
+                  <p>{item.fields.description}</p>
+                </div>
+                <div>
+                  <ul className="list-unstyled skills">{tags}</ul>
+                  {source}
+                </div>
               </div>
             </div>
           </div>
@@ -75,7 +77,7 @@ class Projects extends React.Component {
       );
     });
 
-    return <div className="container">{projects}</div>;
+    return <div className="whiteBg">{projects}</div>;
   }
 }
 

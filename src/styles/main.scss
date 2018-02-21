@@ -1,7 +1,40 @@
 /* Insert custom styling here */
-* {
+
+/* variable definition */
+$primary-orange: #e1a89f;
+$primary-pink: #ba8a9a;
+$primary-purple: #966994;
+$primary-purple-light: #cbb4ca;
+
+div {
   box-sizing: border-box;
   // border: 1px dotted red;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.mainBg {
+  background: url("https://images.contentful.com/7mu3j4uwl6w5/64PGhIgHx6IgA6A4uEEMuS/d4a37195944083a46e588c5c4ee635a0/harli-marten-140106-unsplash.jpg")
+    no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.whiteBg {
+  background-color: #fff;
+  min-height: 50vh;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.row {
+  background-color: #fff;
+  padding: 0 2em;
 }
 
 button {
@@ -12,15 +45,9 @@ button {
   padding: 1em;
 }
 
-.container {
-  min-height: 75vh;
-}
-
 .hero {
-  min-height: 75vh;
-  width: 100%;
-  background-color: #2b2b2b;
-  color: #fff;
+  border-bottom: 1px solid grey;
+  padding: 5%;
 
   h1,
   p {
@@ -28,14 +55,70 @@ button {
   }
 }
 
+.top {
+  background-color: transparent;
+  min-height: 20vh;
+}
+
 .navbar {
-  background-color: #e8e8e8;
+  background-color: white;
+  margin-left: -15px;
+  margin-right: -15px;
   margin-bottom: 0;
   border-radius: 0;
 
   a {
     text-decoration: none;
     color: #000;
+  }
+}
+
+.navText {
+  font-weight: 400;
+  color: black;
+  font-size: 1.2em;
+  text-transform: uppercase;
+}
+
+.nav > li > a:focus,
+.nav > li > a:hover {
+  background-color: white;
+}
+
+.active {
+  border-bottom: 4px solid $primary-purple-light;
+}
+
+.footer {
+  background-color: transparent;
+  color: white;
+  padding: 1em;
+  min-height: 20vh;
+
+  p {
+    font-size: 1.2em;
+    padding: 1em;
+  }
+
+  .brand {
+    border-bottom: 1px solid white;
+  }
+}
+
+.project {
+  border-bottom: 1px solid rgba(#ccc, 0.59);
+  padding: 5em;
+
+  img {
+    border-radius: 2em;
+    -moz-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
   }
 }
 
@@ -46,7 +129,7 @@ button {
   line-height: 1.5em;
   font-size: 0.9em;
   border-radius: 3px;
-  background: #df346d;
+  background: $primary-orange;
   padding: 3px 15px;
   margin-right: 1em;
   margin-bottom: 0.5em;
@@ -54,5 +137,13 @@ button {
 
 .avatar {
   border-radius: 100%;
+  border: 3px solid white;
   max-height: 150px;
+  margin-bottom: 1em;
+}
+
+.contactIcons {
+  a {
+    padding: 3%;
+  }
 }

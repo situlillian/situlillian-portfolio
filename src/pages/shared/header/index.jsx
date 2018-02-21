@@ -13,7 +13,7 @@ class PageHeader extends React.Component {
     const nav = [];
 
     // Add future links lowercase with hyphens
-    ["projects", "contact", "about"].forEach((item, index) => {
+    ["home", "contact", "about"].forEach((item, index) => {
       const link = "/" + item;
       nav.push(
         <li key={index}>
@@ -25,8 +25,11 @@ class PageHeader extends React.Component {
     });
 
     return (
-      <nav className="navbar">
-        <div className="container-fluid">
+      <div>
+        <div className="top">
+          <p className="text-right">Lillian Situ</p>
+        </div>
+        <nav className="navbar">
           <div className="navbar-header">
             <button
               type="button"
@@ -49,9 +52,8 @@ class PageHeader extends React.Component {
             <ul className="nav navbar-nav navbar-right">{nav}</ul>
             {/* <!-- /.navbar-collapse --> */}
           </div>
-          {/* <!-- /.container-fluid --> */}
-        </div>
-      </nav>
+        </nav>
+      </div>
     );
   }
 }

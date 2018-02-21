@@ -2,6 +2,7 @@
 
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
+import Projects from "../projects/index.jsx";
 
 class Home extends React.Component {
   constructor(props) {
@@ -10,13 +11,13 @@ class Home extends React.Component {
 
   render() {
     return (
-      <div className="hero">
+      <div className="whiteBg">
         <div className="row">
-          <div className="col-xs-12 text-center">
+          <div className="hero col-xs-12 text-center">
             <h1>Front-end Web Developer.</h1>
             <p>
-              Based out of Austin, TX. Specializing in front-end React development. If you are a business seeking a web presence or an
-              employer looking to hire, you can get in touch with me here.
+              Based out of Austin, TX. Specializing in front-end React development. Interested in solving problems. If you are a business
+              seeking a web presence or an employer looking to hire, you can get in touch with me here.
             </p>
             <div className="row">
               <div className="col-xs-12 col-md-6">
@@ -31,6 +32,7 @@ class Home extends React.Component {
             </div>
           </div>
         </div>
+        <Projects />
       </div>
     );
   }
