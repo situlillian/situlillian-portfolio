@@ -14,11 +14,13 @@ class Home extends React.Component {
       <div className="whiteBg">
         <div className="row">
           <div className="hero col-xs-12 text-center">
-            <h1>Front-end Web Developer.</h1>
-            <p>
-              Based out of Austin, TX. Specializing in front-end React development. Interested in solving problems. If you are a business
-              seeking a web presence or an employer looking to hire, you can get in touch with me here.
-            </p>
+            <div className="heroText">
+              <h1>Front-end Web Developer.</h1>
+              <p>
+                Based out of Austin, TX. Specializing in front-end React development. Interested in solving problems. If you are a business
+                seeking a web presence or an employer looking to hire, you can get in touch with me here.
+              </p>
+            </div>
             <div className="row">
               <div className="col-xs-12 col-md-6">
                 <button className="action1">

@@ -5,8 +5,13 @@ $primary-orange: #e1a89f;
 $primary-pink: #ba8a9a;
 $primary-purple: #966994;
 $primary-purple-light: #cbb4ca;
+$Esteban: "Esteban", serif;
+$Montserrat: "Montserrat", sans-serif;
+$Josefin: "Josefin Slab", serif;
 
-div {
+div,
+a,
+li {
   box-sizing: border-box;
   // border: 1px dotted red;
 }
@@ -16,9 +21,20 @@ a {
   color: inherit;
 }
 
+p {
+  font-family: $Esteban;
+  font-size: 1.3em;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: $Montserrat;
+}
+
 .mainBg {
-  background: url("https://images.contentful.com/7mu3j4uwl6w5/64PGhIgHx6IgA6A4uEEMuS/d4a37195944083a46e588c5c4ee635a0/harli-marten-140106-unsplash.jpg")
-    no-repeat center center fixed;
+  background: url("../assets/bg.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -39,25 +55,35 @@ a {
 
 button {
   padding: 1em;
-  border-radius: 0.4em;
+  border-radius: 0.3em;
   color: #000;
   margin: 1em;
   padding: 1em;
+  font-family: $Montserrat;
 }
 
 .hero {
   border-bottom: 1px solid grey;
   padding: 5%;
 
-  h1,
   p {
     padding: 5%;
   }
+
+  h1 {
+    font-family: $Montserrat;
+    font-weight: bold;
+    padding: 5%;
+  }
+}
+
+.heroText {
 }
 
 .top {
   background-color: transparent;
   min-height: 20vh;
+  padding: 1em;
 }
 
 .navbar {
@@ -66,6 +92,7 @@ button {
   margin-right: -15px;
   margin-bottom: 0;
   border-radius: 0;
+  padding: 0 3em;
 
   a {
     text-decoration: none;
@@ -74,7 +101,7 @@ button {
 }
 
 .navText {
-  font-weight: 400;
+  font-family: $Montserrat;
   color: black;
   font-size: 1.2em;
   text-transform: uppercase;
@@ -83,6 +110,98 @@ button {
 .nav > li > a:focus,
 .nav > li > a:hover {
   background-color: white;
+}
+
+.nav > li {
+  border-bottom: 4px solid white;
+}
+
+.tagLogo {
+  font-family: "Josefin Slab";
+  margin-top: -1em;
+  font-size: 1.1em;
+}
+
+.nameLogo {
+  font-family: "Josefin Slab";
+  font-weight: 400;
+  font-size: 3em;
+  color: #3a4945;
+  padding: 0 0 0.125em;
+
+  &::before,
+  &::after {
+    content: "";
+    width: 100%;
+    height: 3px;
+    z-index: -1;
+    background: #3a4945;
+    position: absolute;
+    -webkit-transform: scale3d(0, 1, 1);
+    transform: scale3d(0, 1, 1);
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+  }
+
+  &::before {
+    right: 0;
+    top: 0;
+    -webkit-transform-origin: 100% 50%;
+    transform-origin: 100% 50%;
+  }
+
+  &::after {
+    left: 0;
+    bottom: 0;
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+  }
+
+  &:hover::before,
+  &:hover::after {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  &:hover span {
+    color: transparent;
+
+    &::before,
+    &::after {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  span {
+    position: relative;
+    -webkit-transition: color 0.5s;
+    transition: color 0.5s;
+
+    &::before,
+    &::after {
+      position: absolute;
+      color: #fff;
+      opacity: 0;
+      -webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
+      transition: transform 0.5s, opacity 0.5s;
+    }
+
+    &::before {
+      content: attr(data-letters-l);
+      left: 0;
+      -webkit-transform: translate3d(-5px, 0, 0);
+      transform: translate3d(-5px, 0, 0);
+    }
+
+    &::after {
+      content: attr(data-letters-r);
+      right: 0;
+      -webkit-transform: translate3d(5px, 0, 0);
+      transform: translate3d(5px, 0, 0);
+    }
+  }
 }
 
 .active {
@@ -96,7 +215,7 @@ button {
   min-height: 20vh;
 
   p {
-    font-size: 1.2em;
+    font-size: 1.1em;
     padding: 1em;
   }
 
@@ -127,7 +246,7 @@ button {
   color: #fff;
   text-shadow: 0 0.5px 0 rgba(0, 0, 0, 0.15);
   line-height: 1.5em;
-  font-size: 0.9em;
+  font-size: 1em;
   border-radius: 3px;
   background: $primary-orange;
   padding: 3px 15px;

@@ -27,31 +27,15 @@ class PageHeader extends React.Component {
     return (
       <div>
         <div className="top">
-          <p className="text-right">Lillian Situ</p>
+          <div className="nameLogo">
+            <span data-letters-l="Lill" data-letters-r="ian">
+              Lillian
+            </span>
+          </div>
+          <p className="tagLogo">WEB DEVELOPER</p>
         </div>
         <nav className="navbar">
-          <div className="navbar-header">
-            <button
-              type="button"
-              className="navbar-toggle collapsed"
-              data-toggle="collapse"
-              data-target="#bs-example-navbar-collapse-1"
-              aria-expanded="false"
-            >
-              <span className="sr-only">Toggle navigation</span>
-              <span className="icon-bar" />
-              <span className="icon-bar" />
-              <span className="icon-bar" />
-            </button>
-            <Link className="navbar-brand" to="/">
-              LS
-            </Link>
-          </div>
-
-          <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul className="nav navbar-nav navbar-right">{nav}</ul>
-            {/* <!-- /.navbar-collapse --> */}
-          </div>
+          <ul className="nav navbar-nav navbar-right">{nav}</ul>
         </nav>
       </div>
     );
