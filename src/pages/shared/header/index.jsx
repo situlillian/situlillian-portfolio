@@ -25,8 +25,8 @@ class PageHeader extends React.Component {
     });
 
     return (
-      <div className="">
-        <div className="top">
+      <div>
+        <div className="topSection">
           <div className="nameLogo">
             <Link to="/">
               <span data-letters-l="Lill" data-letters-r="ian">
