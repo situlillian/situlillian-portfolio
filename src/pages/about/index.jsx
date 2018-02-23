@@ -2,7 +2,7 @@
 
 import React, { Component } from "react";
 
-class Projects extends React.Component {
+class About extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -22,4 +22,4 @@ class Projects extends React.Component {
   }
 }
 
-module.exports = Projects;
+module.exports = About;

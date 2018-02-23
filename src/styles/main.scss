@@ -19,6 +19,10 @@ li {
 a {
   text-decoration: none;
   color: inherit;
+
+  &:visited {
+    color: inherit;
+  }
 }
 
 p {
@@ -31,6 +35,7 @@ h2,
 h3,
 h4 {
   font-family: $Montserrat;
+  font-size: 250%;
 }
 
 .mainBg {
@@ -39,25 +44,19 @@ h4 {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-}
-
-.whiteBg {
-  background-color: #fff;
-  min-height: 50vh;
-  margin-left: -15px;
-  margin-right: -15px;
-}
-
-.row {
-  background-color: #fff;
-  padding: 0 2em;
+  perspective: 1px;
+  transform-style: preserve-3d;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
 }
 
 button {
   padding: 1em;
   border-radius: 0.3em;
   color: #000;
-  margin: 1em;
+  margin-right: 1em;
   padding: 1em;
   font-family: $Montserrat;
 }
@@ -66,7 +65,8 @@ button {
   border-bottom: 1px solid grey;
   padding: 5%;
 
-  p {
+  p,
+  .btns {
     padding: 5%;
   }
 
@@ -77,16 +77,38 @@ button {
   }
 }
 
-.heroText {
-}
-
 .top {
   background-color: transparent;
   min-height: 20vh;
-  padding: 1em;
+  padding: 3em;
+}
+
+.parallax {
+  display: flex;
+  flex: 3;
+  position: relative;
+  transform: translateZ(-5px) scale(6);
+  z-index: -1;
+  height: 20vh;
+}
+
+.whiteBg {
+  // background-color: #fff;
+  min-height: 50vh;
+  margin-left: -15px;
+  margin-right: -15px;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+.row {
+  // background-color: #fff;
+  padding: 0 2em;
 }
 
 .navbar {
+  border-top: 1px solid #ccc;
   background-color: white;
   margin-left: -15px;
   margin-right: -15px;
@@ -97,6 +119,11 @@ button {
   a {
     text-decoration: none;
     color: #000;
+    border-bottom: 4px solid white;
+  }
+
+  .active {
+    border-bottom: 4px solid $primary-purple-light;
   }
 }
 
@@ -112,20 +139,17 @@ button {
   background-color: white;
 }
 
-.nav > li {
-  border-bottom: 4px solid white;
-}
-
 .tagLogo {
-  font-family: "Josefin Slab";
-  margin-top: -1em;
-  font-size: 1.1em;
+  font-family: $Josefin;
+  margin-top: -1.5em;
+  font-size: 1.2em;
+  letter-spacing: 1.5px;
 }
 
 .nameLogo {
   font-family: "Josefin Slab";
   font-weight: 400;
-  font-size: 3em;
+  font-size: 4em;
   color: #3a4945;
   padding: 0 0 0.125em;
 
@@ -135,7 +159,6 @@ button {
     width: 100%;
     height: 3px;
     z-index: -1;
-    background: #3a4945;
     position: absolute;
     -webkit-transform: scale3d(0, 1, 1);
     transform: scale3d(0, 1, 1);
@@ -202,10 +225,12 @@ button {
       transform: translate3d(5px, 0, 0);
     }
   }
-}
 
-.active {
-  border-bottom: 4px solid $primary-purple-light;
+  a:hover,
+  a:focus,
+  a:active {
+    text-decoration: none;
+  }
 }
 
 .footer {
@@ -229,10 +254,7 @@ button {
   padding: 5em;
 
   img {
-    border-radius: 2em;
-    -moz-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
-    -webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
-    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+    border-radius: 0.5em;
   }
 
   a {
@@ -265,4 +287,9 @@ button {
   a {
     padding: 3%;
   }
+}
+
+.map {
+  width: 100vh;
+  height: 30vh;
 }

@@ -2,8 +2,9 @@
 
 import React, { Component } from "react";
 import avatar from "../../assets/lilliansitu.jpg";
+import Map from "./map.jsx";
 
-class Projects extends React.Component {
+class Contact extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -14,7 +15,8 @@ class Projects extends React.Component {
         <div className="row">
           <div className="container">
             <div className="col-xs-12">
-              <h1>Google Maps goes here</h1>
+              <h1> SOMETHING GOES HERE</h1>
+              <br />
             </div>
             <div className="col-xs-12 col-sm-4 text-center">
               <img className="avatar" src={avatar} />
@@ -54,4 +56,4 @@ class Projects extends React.Component {
   }
 }
 
-module.exports = Projects;
+module.exports = Contact;
