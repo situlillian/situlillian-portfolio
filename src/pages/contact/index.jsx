@@ -22,13 +22,13 @@ class Contact extends React.Component {
               <img className="avatar" src={avatar} />
               <div className="contactIcons">
                 <a href="https://github.com/situlillian" target="blank">
-                  <i className="fab fa-linkedin fa-lg" />
+                  <i className="fab fa-linkedin fa-2x" />
                 </a>
                 <a href="https://www.linkedin.com/in/situlillian/" target="blank">
-                  <i className="fab fa-github fa-lg" />
+                  <i className="fab fa-github fa-2x" />
                 </a>
                 <a href="mailto:mslilliansitu@gmail.com" target="blank">
-                  <i className="fas fa-envelope fa-lg" />
+                  <i className="fas fa-envelope fa-2x" />
                 </a>
               </div>
             </div>

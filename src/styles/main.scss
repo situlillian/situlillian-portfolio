@@ -1,18 +1,20 @@
 /* Insert custom styling here */
 
 /* variable definition */
-$primary-orange: #e1a89f;
-$primary-pink: #ba8a9a;
-$primary-purple: #966994;
-$primary-purple-light: #cbb4ca;
+$primary-orange: #fd7275;
+$secondary-orange: #ff8e8a;
+$primary-tan: #f7e5da;
+$primary-blue: #9fe0dc;
+$secondary-blue: #b2dcd8;
 $Esteban: "Esteban", serif;
 $Montserrat: "Montserrat", sans-serif;
 $Josefin: "Josefin Slab", serif;
+$hfpadding: 4em;
+$primary-border: 1px solid rgba(#ccc, 0.59);
 
 html {
   height: 100%;
 }
-
 // * {
 //   border: 1px solid green;
 // }
@@ -21,7 +23,6 @@ div,
 a,
 li {
   box-sizing: border-box;
-  // border: 1px dotted red;
 }
 
 a {
@@ -30,6 +31,11 @@ a {
 
   &:visited {
     color: inherit;
+  }
+
+  &:hover {
+    color: inherit;
+    text-decoration: none;
   }
 }
 
@@ -43,7 +49,14 @@ h2,
 h3,
 h4 {
   font-family: $Montserrat;
-  font-size: 250%;
+}
+
+h1 {
+  font-size: 200%;
+}
+
+h2 {
+  font-size: 170%;
 }
 
 .mainBg {
@@ -65,15 +78,26 @@ h4 {
 button {
   padding: 1em;
   border-radius: 0.3em;
-  color: #000;
+  color: white;
   margin-right: 1em;
   padding: 1em;
   font-family: $Montserrat;
+  font-size: 1.1em;
+
+  &.action1 {
+    background-color: white;
+    color: $primary-blue;
+    border: 2px solid $primary-blue;
+  }
+
+  &.action2 {
+    background-color: $secondary-orange;
+    border: 1px solid $secondary-orange;
+  }
 }
 
 .hero {
-  border-bottom: 1px solid grey;
-  padding: 5%;
+  border-bottom: $primary-border;
 
   p,
   .btns {
@@ -89,9 +113,9 @@ button {
 
 .topSection {
   background-color: transparent;
-  min-height: 20vh;
-  padding: 3em;
-  z-index: 2;
+  min-height: 25vh;
+  padding: $hfpadding;
+  z-index: 10;
 }
 
 .parallax {
@@ -114,28 +138,31 @@ button {
 }
 
 .row {
-  // background-color: #fff;
   padding: 0 2em;
 }
 
 .navbar {
-  border-top: 1px solid #ccc;
+  border-top: $primary-border;
   background-color: white;
   margin-left: -15px;
   margin-right: -15px;
   margin-bottom: 0;
   border-radius: 0;
-  padding: 0 3em;
-  z-index: 2;
+  padding: 1em 2em;
+  z-index: 5;
 
-  a {
-    text-decoration: none;
-    color: #000;
-    border-bottom: 4px solid white;
+  li {
+    a {
+      padding-bottom: 0.5em;
+      margin-right: 1em;
+      text-decoration: none;
+      color: #000;
+      border-bottom: 2px solid white;
+    }
   }
 
   .active {
-    border-bottom: 4px solid $primary-purple-light;
+    border-bottom: 2px solid $primary-orange;
   }
 }
 
@@ -153,7 +180,7 @@ button {
 
 .tagLogo {
   font-family: $Josefin;
-  margin-top: -1.5em;
+  margin-top: -1.3em;
   font-size: 1.2em;
   letter-spacing: 1.5px;
 }
@@ -162,7 +189,7 @@ button {
   font-family: "Josefin Slab";
   font-weight: 400;
   font-size: 4em;
-  color: #3a4945;
+  color: black;
   padding: 0 0 0.125em;
   display: inline;
 
@@ -218,7 +245,7 @@ button {
     &::before,
     &::after {
       position: absolute;
-      color: #fff;
+      color: rgba(#fff, 0.82);
       opacity: 0;
       -webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
       transition: transform 0.5s, opacity 0.5s;
@@ -249,21 +276,29 @@ button {
 .footer {
   background-color: transparent;
   color: white;
-  padding: 1em;
+  padding: $hfpadding;
   min-height: 20vh;
+  border-top: $primary-border;
 
   p {
     font-size: 1.1em;
     padding: 1em;
+    display: inline-block;
+    color: white;
   }
 
-  .brand {
+  .footerText {
+    margin-top: 5vh;
+  }
+
+  .footerNav {
     border-bottom: 1px solid white;
+    margin-bottom: 5vh;
   }
 }
 
 .project {
-  border-bottom: 1px solid rgba(#ccc, 0.59);
+  border-bottom: $primary-border;
   padding: 5em;
 
   img {
@@ -283,10 +318,14 @@ button {
   line-height: 1.5em;
   font-size: 1em;
   border-radius: 3px;
-  background: $primary-orange;
+  background: $primary-blue;
   padding: 3px 15px;
   margin-right: 1em;
   margin-bottom: 0.5em;
+}
+
+.skillsDesc {
+  padding: 1.5em 0;
 }
 
 .avatar {
@@ -298,65 +337,56 @@ button {
 
 .contactIcons {
   a {
-    padding: 3%;
+    padding: 5%;
   }
 }
 
-// .parallaxContainer {
-//   margin: 0;
-//   padding: 0;
-//   perspective: 1px;
-//   transform-style: preserve-3d;
-//   height: 80vh;
-//   overflow-x: hidden;
-//   // overflow-y: scroll;
-//   scroll-behavior: smooth;
-// }
-
 .slide {
   position: relative;
-  padding: 10vh 3%;
-  height: 50vh;
-  // width: 100vw;
+  padding: 2vh 2% 0 2%;
+  height: 46vh;
   box-sizing: border-box;
-  /*   box-shadow: 0 -1px 10px rgba(0, 0, 0, .7); */
   transform-style: inherit;
+  color: white;
 }
 
 .imgP {
-  filter: grayscale(70%);
+  display: none;
+  visibility: hidden;
+  filter: contrast(1.2);
   position: absolute;
   top: 50%;
   left: 80%;
-  // width: 320px;
   height: 320px;
   transform: translateZ(0.25px) scale(0.75) translateX(-74%) translateY(-70%);
-  // padding: 10px;
-  border-radius: 0px;
-  /*   background: rgba(240,230,220, .7); */
-  /*   box-shadow: 0 0 8px rgba(0, 0, 0, .7); */
+  padding: 10px;
+  border-radius: 0.5em;
+
+  &:last-of-type {
+    transform: translateZ(0.4px) scale(0.6) translateX(-84%) translateY(40%);
+  }
 }
 
-.imgP:last-of-type {
-  transform: translateZ(0.4px) scale(0.6) translateX(-84%) translateY(40%);
-}
+// hide imgs on smaller screens
+@media screen and (min-width: 992px) {
+  .imgP {
+    display: block;
+    visibility: visible;
+  }
 
-img:hover {
-  filter: grayscale(0%);
-}
-
-.slide:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  .title {
+    padding: 10%;
+  }
 }
 
 .title {
   padding: 3%;
   border-radius: 0px;
+  border: 1px solid rgba(#fd7275, 0.29);
+
+  &:nth-of-type(2n + 1) {
+    border: 1px solid rgba(#9fe0dc, 0.79);
+  }
 }
 
 .slide:nth-child(2n) .title {
@@ -368,20 +398,20 @@ img:hover {
   margin-left: auto;
   margin-right: 0;
 }
-//
-// .slide,
-// .slide:before {
-//   background: 25% 25% / cover;
-// }
 
-.header {
-  text-align: center;
-  font-size: 175%;
-  color: #fff;
-  padding: 10vh 10%;
-  height: 35vh;
-  margin-bottom: -40vh;
+.slide,
+.slide:before {
+  background: 25% 25% / cover;
 }
+
+// .header {
+//   text-align: center;
+//   font-size: 175%;
+//   color: #fff;
+//   padding: 10vh 10%;
+//   height: 35vh;
+//   margin-bottom: -40vh;
+// }
 
 .title {
   background-color: transparent;
@@ -390,20 +420,245 @@ img:hover {
 
 .title h1 {
   transform: translateZ(0.25px) scale(0.75);
-  transform-origin: 70% -80%;
+  transform-origin: 60%;
 }
 
-// #slide1:before {
-//   background-color: transparent;
-//   transform: translateZ(-1px) scale(2);
-// }
-//
-// #slide2 {
-//   background-color: transparent;
-//   z-index: 2;
-// }
-//
-// #slide3:before {
-//   background-color: transparent;
-//   transform: translateZ(-1px) scale(2);
-// }
+.scrollPast {
+  transition: color 3s;
+}
+
+.scrollPast:hover {
+  color: black;
+}
+
+#slide1:before {
+  background-color: transparent;
+  transform: translateZ(-1px) scale(2);
+}
+
+#slide2 {
+  background-color: transparent;
+  z-index: 2;
+}
+
+#slide3:before {
+  background-color: transparent;
+  transform: translateZ(-1px) scale(2);
+}
+
+/* animated junk */
+
+.trans {
+  opacity: 0.6;
+}
+
+.ball1 {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: $primary-blue;
+  position: absolute;
+  -webkit-animation: moveX 6.45s ease-in-out 0s infinite alternate, moveY 7.4s ease-in-out 0s infinite alternate;
+  -moz-animation: moveX 6.45s ease-in-out 0s infinite alternate, moveY 7.4s ease-in-out 0s infinite alternate;
+  -o-animation: moveX 6.04s ease-in-out 0s infinite alternate, moveY 7.4s ease-in-out 0s infinite alternate;
+  animation: moveX 6.45s ease-in-out 0s infinite alternate, moveY 7.4s ease-in-out 0s infinite alternate;
+}
+
+.ball2 {
+  display: block;
+  width: 50px;
+  height: 50px;
+  horizontal-anchor: center;
+  border-radius: 50%;
+  background-color: $primary-tan;
+  position: absolute;
+  -webkit-animation: moveX 11.45s ease-in-out 0s infinite alternate, moveY 9.4s ease-in-out 0s infinite alternate;
+  -moz-animation: moveX 11.45s ease-in-out 0s infinite alternate, moveY 9.4s ease-in-out 0s infinite alternate;
+  -o-animation: moveX 11.04s ease-in-out 0s infinite alternate, moveY 9.4s ease-in-out 0s infinite alternate;
+  animation: moveX 11.45s ease-in-out 0s infinite alternate, moveY 9.4s ease-in-out 0s infinite alternate;
+}
+
+.ball2:hover {
+  width: 100px;
+  height: 100px;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+}
+
+.ball3 {
+  display: block;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: $secondary-orange;
+  position: absolute;
+  -webkit-animation: moveX 8.15s linear 0s infinite alternate, moveY 5.8s linear 0s infinite alternate;
+  -moz-animation: moveX 8.15s linear 0s infinite alternate, moveY 5.8s linear 0s infinite alternate;
+  -o-animation: moveX 8.15s linear 0s infinite alternate, moveY 5.8s linear 0s infinite alternate;
+  animation: moveX 8.15s linear 0s infinite alternate, moveY 5.8s linear 0s infinite alternate;
+}
+
+.ball4 {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #f2f2ee;
+  position: absolute;
+  -webkit-animation: moveX 10.09s linear 0s infinite alternate, moveY 9.4s linear 0s infinite alternate;
+  -moz-animation: moveX 10.09s linear 0s infinite alternate, moveY 9.4s linear 0s infinite alternate;
+  -o-animation: moveX 10.09s linear 0s infinite alternate, moveY 9.4s linear 0s infinite alternate;
+  animation: moveX 10.09s linear 0s infinite alternate, moveY 9.4s linear 0s infinite alternate;
+}
+
+.ball4 {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #f2f2ee;
+  position: absolute;
+  -webkit-animation: moveX 10.09s linear 0s infinite alternate, moveY 9.4s linear 0s infinite alternate;
+  -moz-animation: moveX 10.09s linear 0s infinite alternate, moveY 9.4s linear 0s infinite alternate;
+  -o-animation: moveX 10.09s linear 0s infinite alternate, moveY 9.4s linear 0s infinite alternate;
+  animation: moveX 10.09s linear 0s infinite alternate, moveY 9.4s linear 0s infinite alternate;
+}
+
+.ball5 {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: $secondary-blue;
+  position: absolute;
+  -webkit-animation: moveX 13.09s linear 0s infinite alternate, moveY 7.4s linear 0s infinite alternate;
+  -moz-animation: moveX 13.09s linear 0s infinite alternate, moveY 14.4s linear 0s infinite alternate;
+  -o-animation: moveX 13.09s linear 0s infinite alternate, moveY 14.4s linear 0s infinite alternate;
+  animation: moveX 13.09s linear 0s infinite alternate, moveY 14.4s linear 0s infinite alternate;
+}
+
+.square1 {
+  display: block;
+  width: 45px;
+  height: 45px;
+  background-color: black;
+  position: absolute;
+  -webkit-animation: moveX 12.34s linear 0s infinite alternate, moveY 15.06s linear 0s infinite alternate,
+    spin 40000ms linear 0s infinite alternate;
+  -moz-animation: moveX 12.34s linear 0s infinite alternate, moveY 15.06s linear 0s infinite alternate,
+    spin 40000ms linear 0s infinite alternate;
+  -o-animation: moveX 12.34s linear 0s infinite alternate, moveY 15.06s linear 0s infinite alternate,
+    spin 40000ms linear 0s infinite alternate;
+  animation: moveX 12.34s linear 0s infinite alternate, moveY 15.06s linear 0s infinite alternate, spin 40000ms linear 0s infinite alternate;
+}
+
+.square3 {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-color: #ccc;
+  position: absolute;
+  -webkit-animation: moveX 19.74s linear 0s infinite alternate, moveY 17.06s linear 0s infinite alternate,
+    spin 63000ms linear 0s infinite alternate;
+  -moz-animation: moveX 19.34s linear 0s infinite alternate, moveY 17.06s linear 0s infinite alternate,
+    spin 63000ms linear 0s infinite alternate;
+  -o-animation: moveX 19.34s linear 0s infinite alternate, moveY 17.06s linear 0s infinite alternate,
+    spin 63000ms linear 0s infinite alternate;
+  animation: moveX 19.34s linear 0s infinite alternate, moveY 17.06s linear 0s infinite alternate, spin 63000ms linear 0s infinite alternate;
+}
+
+.triangle2 {
+  width: 0;
+  height: 0;
+  border-top: 43px solid transparent;
+  border-bottom: 30px solid transparent;
+  border-left: 65px solid $primary-orange;
+  position: absolute;
+  -webkit-animation: moveX 24.34s linear 0s infinite alternate, moveY 16.06s linear 0s infinite alternate,
+    spin 55300ms linear 0s infinite alternate;
+  -moz-animation: moveX 24.34s linear 0s infinite alternate, moveY 16.06s linear 0s infinite alternate,
+    spin 55300ms linear 0s infinite alternate;
+  -o-animation: moveX 24.34s linear 0s infinite alternate, moveY 16.06s linear 0s infinite alternate,
+    spin 55300ms linear 0s infinite alternate;
+  animation: moveX 24.34s linear 0s infinite alternate, moveY 16.06s linear 0s infinite alternate, spin 55300ms linear 0s infinite alternate;
+}
+
+/* 2.2 Keyframes for Floating Geometry  */
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes moveX {
+  from {
+    left: 0;
+  }
+  to {
+    left: 100%;
+  }
+}
+@-moz-keyframes moveX {
+  from {
+    left: 0;
+  }
+  to {
+    left: 100%;
+  }
+}
+@-o-keyframes moveX {
+  from {
+    left: 0;
+  }
+  to {
+    left: 100%;
+  }
+}
+@keyframes moveX {
+  from {
+    left: 0;
+  }
+  to {
+    left: 100%;
+  }
+}
+@-webkit-keyframes moveY {
+  from {
+    top: 0;
+  }
+  to {
+    top: 100%;
+  }
+}
+@-moz-keyframes moveY {
+  from {
+    top: 0;
+  }
+  to {
+    top: 100%;
+  }
+}
+@-o-keyframes moveY {
+  from {
+    top: 0;
+  }
+  to {
+    top: 100%;
+  }
+}
+@keyframes moveY {
+  from {
+    top: 0;
+  }
+  to {
+    top: 100%;
+  }
+}

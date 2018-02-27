@@ -37,7 +37,9 @@ class PageHeader extends React.Component {
           <p className="tagLogo">WEB DEVELOPER</p>
         </div>
         <nav className="navbar">
-          <ul className="nav navbar-nav navbar-right">{nav}</ul>
+          <div className="container">
+            <ul className="nav navbar-nav navbar-right">{nav}</ul>
+          </div>
         </nav>
       </div>
     );

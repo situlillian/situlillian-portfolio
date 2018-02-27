@@ -63,7 +63,7 @@ class Projects extends React.Component {
                     {item.fields.name}
                   </a>
                 </h2>
-                <div>
+                <div className="skillsDesc">
                   <p>{item.fields.description}</p>
                 </div>
                 <div>
