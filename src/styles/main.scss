@@ -1,15 +1,17 @@
 /* Insert custom styling here */
 
 /* variable definition */
-$primary-orange: #fd7275;
-$secondary-orange: #ff8e8a;
+$primary-pink: #ff8e8a;
+$primary-orange: #fe816d;
+$secondary-orange: #fe998d;
 $primary-tan: #f7e5da;
 $primary-blue: #9fe0dc;
+$primary-blue-dark: #88c1bd;
 $secondary-blue: #b2dcd8;
 $Esteban: "Esteban", serif;
 $Montserrat: "Montserrat", sans-serif;
 $Josefin: "Josefin Slab", serif;
-$hfpadding: 4em;
+$hfpadding: 0;
 $primary-border: 1px solid rgba(#ccc, 0.59);
 
 html {
@@ -76,45 +78,29 @@ h2 {
 }
 
 button {
-  padding: 1em;
-  border-radius: 0.3em;
+  padding: 0.7em;
+  margin-bottom: 0.7em;
+  border-radius: 0.2em;
   color: white;
-  margin-right: 1em;
-  padding: 1em;
   font-family: $Montserrat;
   font-size: 1.1em;
 
   &.action1 {
     background-color: white;
-    color: $primary-blue;
-    border: 2px solid $primary-blue;
+    color: $primary-blue-dark;
+    border: 2px solid $primary-blue-dark;
+    margin-right: 0;
   }
 
   &.action2 {
-    background-color: $secondary-orange;
-    border: 1px solid $secondary-orange;
-  }
-}
-
-.hero {
-  border-bottom: $primary-border;
-
-  p,
-  .btns {
-    padding: 5%;
-  }
-
-  h1 {
-    font-family: $Montserrat;
-    font-weight: bold;
-    padding: 5%;
+    background-color: $primary-pink;
+    border: 2px solid $primary-pink;
   }
 }
 
 .topSection {
   background-color: transparent;
-  min-height: 25vh;
-  padding: $hfpadding;
+  padding: 3em 0 3em 3em;
   z-index: 10;
 }
 
@@ -148,34 +134,43 @@ button {
   margin-right: -15px;
   margin-bottom: 0;
   border-radius: 0;
-  padding: 1em 2em;
   z-index: 5;
+  padding: 1em;
 
   li {
+    padding: 1em 0 1em 0;
+
     a {
-      padding-bottom: 0.5em;
-      margin-right: 1em;
+      padding: 0;
+      padding-bottom: 0.3em;
+      margin-right: 3em;
       text-decoration: none;
       color: #000;
       border-bottom: 2px solid white;
+    }
+
+    &:last-of-type {
+      a {
+        margin-right: 0;
+      }
     }
   }
 
   .active {
     border-bottom: 2px solid $primary-orange;
   }
+
+  .nav > li > a:focus,
+  .nav > li > a:hover {
+    background-color: white;
+  }
 }
 
+// used for header and footer
 .navText {
   font-family: $Montserrat;
   color: black;
   font-size: 1.2em;
-  text-transform: uppercase;
-}
-
-.nav > li > a:focus,
-.nav > li > a:hover {
-  background-color: white;
 }
 
 .tagLogo {
@@ -273,6 +268,25 @@ button {
   }
 }
 
+.hero {
+  border-bottom: $primary-border;
+
+  p,
+  .btns,
+  h1 {
+    padding: 3%;
+  }
+
+  h1 {
+    font-family: $Montserrat;
+    font-weight: bold;
+    font-size: 230%;
+    background: -webkit-linear-gradient(white, red);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+  }
+}
+
 .footer {
   background-color: transparent;
   color: white;
@@ -364,18 +378,6 @@ button {
 
   &:last-of-type {
     transform: translateZ(0.4px) scale(0.6) translateX(-84%) translateY(40%);
-  }
-}
-
-// hide imgs on smaller screens
-@media screen and (min-width: 992px) {
-  .imgP {
-    display: block;
-    visibility: visible;
-  }
-
-  .title {
-    padding: 10%;
   }
 }
 
@@ -660,5 +662,25 @@ button {
   }
   to {
     top: 100%;
+  }
+}
+
+// desktop specific styles
+@media screen and (min-width: 992px) {
+  .imgP {
+    display: block;
+    visibility: visible;
+  }
+
+  .title {
+    padding: 10%;
+  }
+
+  .action2 {
+    margin-left: 2em;
+  }
+
+  .btns {
+    text-align: right;
   }
 }

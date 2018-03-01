@@ -13,12 +13,12 @@ class PageHeader extends React.Component {
     const nav = [];
 
     // Add future links lowercase with hyphens
-    ["about", "contact"].forEach((item, index) => {
+    ["projects", "about", "contact"].forEach((item, index) => {
       const link = "/" + item;
       nav.push(
         <li key={index}>
           <NavLink activeClassName="active" to={link}>
-            <p className="text-uppercase navText">{item}</p>
+            <p className="text-capitalize navText">{item}</p>
           </NavLink>
         </li>
       );
